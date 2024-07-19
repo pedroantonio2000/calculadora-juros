@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Calculadora de juros</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> -->
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <div id="primeiro-container">
+      <div class="titulo-calculadora">
+        <h2>Calculadora de juros</h2>
+        <p id="limpar">Limpar </p>
+      </div>
+      <div id="preencher-campos">
+        <label for="valor-capital" id="capital">Capital
+        </label>
+        <div id="preencher">
+          Preenche todos os campos
+          <i class="fa-solid fa-triangle-exclamation" ></i>
+        </div>
+      </div>
+            
+      <div class="valor cont-border">
+        
+        <p id="simbolo-real" class="icons">R$</p>
+        <input type="number" id="valor-capital">
+      </div>
+      
+      <div class="container-prazo-taxa">
+        <div >
+          <label for="mes" class="text-cal">Prazo mensal</label>
+          <div class="cont-years-por cont-border">
+            <input type="number" id="mes">
+            <p id="simbolo-mes" class="icons">mês</p>
+          </div>
+          
+        </div>
+        <div >
+          <label for="porcetagem" class="text-cal">Taxa de juros mensal</label>
+          <div class="cont-years-por cont-border">
+            <input type="number" name="Rate" id="porcetagem">
+            <p id="simbolo-porcetagem" class="icons">%</p>
+          </div>
+        </div>
+      </div>
+      <p id="text-type">Escolha um tipo de juros</p>
+      <div class="cont-box">
+        <div id="box-simples" class="box-radio">
+          <input type="radio" name="opcao" id="simples" class="input-opcao">
+          <label for="simples">Simples</label>
+        </div>
+        <div class="box-radio" id="box-radio-compostos">
+          <input type="radio" name="opcao" id="compostos" class="input-opcao">
+          <label for="compostos">Compostos</label>
+        </div>
+        
+        <br>
+        <button type="button" id="button-calculate">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/>
+        </svg>
+            Calcular os juros
+        </button>
+        
+      </div>
+    </div>
+    <div id="segundo-container">
+      <h2 id="resultados">Seus resultados</h2>
+      <div class="valor-mostrado">
+        <div class="container-resultado">
+          <p id="valor-juros">Valor dos juros</p>
+          <span id="resultado">R$ 0</span>
+        </div>
+        <div>
+          <p id="texto-total">Valor montante</p>
+          <span id="valor-montante">R$ 0</span>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+</body>
+</html>

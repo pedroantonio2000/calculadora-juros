@@ -1,0 +1,415 @@
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+main {
+    background-color:  #e3f3fd;
+    width: 900px;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+}
+
+
+
+#primeiro-container {
+    margin: 50px 0 50px 50px;
+    width: 50%;
+    padding: 25px;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    height: 510px;
+}
+
+#segundo-container {
+    background-color: #1d343f;
+    padding-left: 16px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 30px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    margin: 50px 50px 50px 0;
+    color: aliceblue;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 510px;
+
+}
+
+.titulo-calculadora {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#limpar {
+    cursor: pointer;
+    background-color: #d7da2f;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 100ms;
+}
+
+#limpar:active {
+    transform:scale(0.9);
+}
+
+#capital {
+    margin-bottom: 8px;
+    display: block;
+    color: #000;
+    text-align: start;
+}
+
+
+.valor {
+   display: flex;
+   border: solid 1px #38393a;
+   margin-bottom: 25px;
+   border-radius: 2px;
+   
+}
+
+#valor-capital {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+
+.container-prazo-taxa {
+   display: flex;
+   gap: 30px;
+   margin-bottom: 25px;
+  
+}
+
+
+
+.text-cal {
+    margin-bottom: 8px;
+    display: block;
+
+}
+
+.cont-years-por {
+    display: flex;
+    align-items: center;
+    border: 1px solid #464849;
+    border-radius: 2px;
+}
+
+#mes {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border: none;
+    outline: none;
+}
+
+
+#porcetagem {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border: none;
+    outline: none;
+}
+
+
+#text-type {
+    margin-bottom: 10px;
+}
+
+.cont-box {
+    display: flex;
+    flex-direction: column;
+   
+    margin-bottom: 35px;
+}
+
+.box-radio {
+    border: 1px solid #38393a;
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    
+    
+}
+
+.box-radio label {
+    font-weight: bold;
+}
+
+
+
+.input-opcao {
+    height: 15px;
+    width: 15px;
+    accent-color: #d7da2f;
+    border: none;
+}
+
+
+
+#button-calculate {
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #d7da2f;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 100ms;
+    /* transition: background-color 0.3s ease, transform 0.3s ease; */
+}
+
+#button-calculate:active {
+    transform:scale(0.9);
+    /* background-color: #c7ca2f; */
+}
+
+
+
+
+#resultados {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#texto-resultado {
+    margin-bottom: 16px;
+}
+
+.valor-mostrado {
+    background-color: #0e2735;
+    border-top: solid #d7da2f;
+    margin-right: 16px;
+    padding: 15px 15px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-resultado {
+    margin-bottom: 20px;
+    border-bottom: solid 1px #fff;
+    
+}
+
+#valor-juros {
+    margin-bottom: 6px;
+}
+
+#resultado {
+    font-size: xx-large;
+    color: #d7da2f;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+#texto-total {
+    margin-bottom: 6px;
+}
+
+#valor-montante {
+    font-size: large;
+}
+
+
+.icons {
+    background-color: #9abed5;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#preencher-campos {
+   display: flex;
+   justify-content: space-between;
+}
+
+#preencher {
+    color: #d73328;
+    display: none;
+}
+
+.fa-triangle-exclamation {
+    color: #f00505;
+}
+
+#box-radio-compostos {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 321px) and (max-width: 920px) {
+    body {
+        height: 160vh;
+       
+    }
+    main {
+        flex-direction: column;
+        height: 1000px;
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+       
+        
+    }
+
+    #primeiro-container {
+        margin: 0;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 20px;
+        width: 350px;
+        height: 600px;
+        
+    }
+
+    #segundo-container {
+        margin: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        width: 350px;
+        height: 350px;
+       
+    }
+
+    #preencher {
+        font-size: small;
+    }
+
+    .container-prazo-taxa {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .valor-mostrado {
+        margin-bottom: 15px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    main {
+        flex-direction: column;
+        height: 1000px;
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+       
+        
+    }
+}
+
+@media (max-width: 915px) and (orientation: landscape) {
+    body {
+        height: 200vh;
+    }
+    main {
+        flex-direction: row;
+        height: 600px;
+        width: 750px;
+    }
+
+    #primeiro-container {
+        height: 470px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0;
+    }
+
+    #segundo-container {
+        height: 470px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+    }
+
+    .container-prazo-taxa {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+
+    }
+
+    .cont-years-por {
+        width: 125px;
+
+    }
+
+    .cont-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .box-radio {
+       width: 48%;
+       height: 41px;
+       
+    }
+
+    #button-calculate {
+        width: 100%;
+        margin-top: 0.8rem;
+    }
+}
+
+/* @media (max-width: 400px) {
+    
+  
+   main {
+        height: 900px;
+   }
+
+   #primeiro-container {
+       width: 300px;
+      
+
+   }
+
+   #segundo-container {
+       height: 300px;
+       width: 300px;
+
+   }
+
+   .valor-mostrado {
+        height: 200px;
+   } 
+} */
+
+
